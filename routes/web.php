@@ -14,6 +14,7 @@ Route::get('/password/request', [LoginController::class, 'forgotPassword'])->nam
 Route::get('/menu-makanan', [MenuMakananController::class, 'index'])->name('menu.makanan');
 Route::get('/menu-minuman', [MenuMinumanController::class, 'index'])->name('menu.minuman');
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
+Route::post('/cart/add', [CartController::class, 'add'])->name('cart.add');
 Route::get('/scan-qr', function () {
     return view('auth.scan-qr'); // Make sure this view file exists
 })->name('scan.qr');

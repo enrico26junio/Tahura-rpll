@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RPLL - Minuman</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet"> <!-- Tambahkan link ke Bootstrap Icons -->
     <style>
         body {
             background: url('/images/tahura-bg.jpg') no-repeat center center fixed;
@@ -59,9 +60,19 @@
                 @foreach ($menuMinuman as $menu)
                     <div class="col">
                         <div class="menu-card">
-                            <img src="{{ $menu->image }}" alt="{{ $menu->name }}" class="img-fluid mb-2">
+                            <!-- Gambar item -->
+                            <img src="{{ asset('storage/' . $menu->image) }}" alt="{{ $menu->name }}" class="img-fluid mb-2">
                             <div class="menu-title">{{ $menu->name }}</div>
                             <div class="menu-price">Rp {{ number_format($menu->price, 0, ',', '.') }}</div>
+                    
+                            <!-- Tombol Order -->
+                            <form action="{{ route('cart.add') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="name" value="{{ $menu->name }}">
+                                <input type="hidden" name="price" value="{{ $menu->price }}">
+                                <input type="hidden" name="image" value="{{ $menu->image }}">
+                                <button type="submit" class="btn btn-primary mt-2">Order</button>
+                            </form>
                         </div>
                     </div>
                 @endforeach

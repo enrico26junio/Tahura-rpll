@@ -10,7 +10,7 @@
             background: url('/images/tahura-bg.jpg') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
         }
         .login-container {
             background-color: rgba(0, 0, 0, 0.7);
@@ -60,9 +60,9 @@
                 </div>
             </form>
             <div class="mt-3 text-center">
-                <a href="#" class="text-white me-3">Log In</a>
+                <a href="#" class="text-white me-3">Admin</a>
+                <a href="#" class="text-white me-3">Penjual</a>
                 <a href="{{ route('scan.qr') }}" class="btn btn-custom btn-sm">Scan QR</a>
-                <a href="#" class="text-white">Sign In</a>
             </div>
         </div>
     </div>
