@@ -46,6 +46,7 @@ class CartController extends Controller
     
         // Jika menu tidak ditemukan, redirect kembali ke menu makanan
         return redirect()->route('menu.makanan')->with('error', 'Menu tidak ditemukan.');
+        return redirect()->route('menu.minuman')->with('error', 'Menu tidak ditemukan.');
     }
     
     // Menghapus item dari cart

@@ -18,19 +18,19 @@ public function run()
 
     MenuMinuman::create([
         'name' => 'Es Jeruk',
-        'price' => 7000,
+        'price' => 5000,
         'image' => 'menu/Jus Jeruk.png',
     ]);
 
     MenuMinuman::create([
         'name' => 'Milkshake',
-        'price' => 7000,
+        'price' => 10000,
         'image' => 'menu/Milkshake.jpg',
     ]);
     
     MenuMinuman::create([
         'name' => 'Kopi Hitam',
-        'price' => 7000,
+        'price' => 5000,
         'image' => 'menu/Kopi Hitam.png',
     ]);
     
@@ -42,7 +42,7 @@ public function run()
     
     MenuMinuman::create([
         'name' => 'Air Mineral',
-        'price' => 7000,
+        'price' => 4000,
         'image' => 'menu/Air Mineral.png',
     ]);
 }
