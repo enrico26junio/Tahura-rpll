@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background: url('/images/tahura-bg.jpg') no-repeat center center fixed;
+            background: url('{{ asset('storage/menu/tahura bg.webp') }}') no-repeat center center fixed;
             background-size: cover;
             height: 100vh;
             font-family: 'Roboto', sans-serif;
@@ -37,10 +37,12 @@
     </style>
 </head>
 <body>
+    <div class="text-center my-3">
+        <img src="{{ asset('storage/menu/logo tahura.png') }}" alt="Tahura Logo" style="width: 150px;">
+    </div>
     <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="login-container text-white col-md-4">
             <div class="text-center mb-4">
-                <img src="/images/tahura-logo.png" alt="TAHURA Logo" style="width: 50px;">
                 <h1 class="login-title">LOGIN</h1>
             </div>
             <form action="{{ route('login') }}" method="POST">
